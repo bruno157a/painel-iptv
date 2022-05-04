@@ -1,0 +1,131 @@
+.panel-body {
+    padding: 15px;
+}
+.bg-white:not(i) {
+    background-color: #fff !important;
+    color: black !important;
+}
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+input[type=checkbox]:not(old) + label > span,
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '?';
+  display     : block;
+  width       : 1em;
+  color       : rgb(153,204,102);
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em rgb(115,153,77);
+  font-weight : bold;
+}
+
+input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+}
+.radiosbordas{
+border: 1px solid #999;
+border: 1px solid rgba(0, 0, 0, .2);
+border-radius: 6px;
+outline: 0;
+-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+transition: box-shadow .25s;
+padding: 5px;
+cursor:pointer;
+}
+
+.radiosanimados{cursor:pointer;
+-webkit-animation:jump 1s ease 0s 1 normal;
+-moz-animation:jump 1s ease 0s 1 normal;
+-ms-animation:jump 1s ease 0s 1 normal;
+animation:jump 1s ease 0s 1 normal;
+}
+.revendabord:hover{
+  box-shadow: 5px 5px 25px rgba(0,0,0,.3);
+}
+
+@-webkit-keyframes jump{
+0%{ -webkit-transform:translateY(0); transform:translateY(0); }
+20%{ -webkit-transform:translateY(0); transform:translateY(0); }
+40%{ -webkit-transform:translateY(-30px); transform:translateY(-30px); }
+50%{ -webkit-transform:translateY(0); transform:translateY(0); }
+60%{ -webkit-transform:translateY(-15px); transform:translateY(-15px); }
+80%{ -webkit-transform:translateY(0); transform:translateY(0); }
+100%{ -webkit-transform:translateY(0);transform:translateY(0); }
+}
+
+@keyframes jump{
+0%{ transform:translateY(0); }
+20%{ transform:translateY(0); }
+40%{ transform:translateY(-30px); }
+50%{ transform:translateY(0); }
+60%{ transform:translateY(-15px); }
+80%{ transform:translateY(0); }
+100%{ transform:translateY(0); }
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(scripts/Preloader_21.gif) center no-repeat #fff;
+}
